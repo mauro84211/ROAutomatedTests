@@ -94,7 +94,8 @@
       <updated>1603745355357</updated>
       <workItem from="1603745365572" duration="1007000" />
       <workItem from="1603828363632" duration="4845000" />
-      <workItem from="1603911852692" duration="5819000" />
+      <workItem from="1603911852692" duration="6641000" />
+      <workItem from="1603991186394" duration="11085000" />
     </task>
     <servers />
   </component>
@@ -113,5 +114,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CucumberJavaRunConfigurationType">
+        <watch expression="wait" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
