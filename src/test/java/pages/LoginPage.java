@@ -22,8 +22,8 @@ public class LoginPage {
         driver.findElement(passwordField).sendKeys(password);
     }
 
-    public void setCompany(String password) {
-        driver.findElement(companyField).sendKeys(password);
+    public void setCompany(String company) {
+        driver.findElement(companyField).sendKeys(company);
     }
 
     public HomePage clickLoginButton() {
