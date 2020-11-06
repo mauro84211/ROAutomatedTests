@@ -15,7 +15,7 @@ public class BaseTest {
     @BeforeMethod
     public void goStart() {
         driver.get("https://rosws.generalsoftwareinc.net:8004/login");
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 8);
     }
 
     @BeforeClass

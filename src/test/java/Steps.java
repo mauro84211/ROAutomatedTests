@@ -5,14 +5,16 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import pages.DispatchPage;
+import pages.DispatchMenu;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.OptimizePage;
 
 public class Steps extends BaseTest {
     LoginPage loginPage;
     HomePage homePage;
-    DispatchPage dispatchPage;
+    DispatchMenu dispatchMenu;
+    OptimizePage optimizePage;
 
     @Given("I am in the login page of the RO System")
     public void iAmInTheLoginPageOfTheROSystem() {
@@ -37,13 +39,15 @@ public class Steps extends BaseTest {
 
     @When("I click over optimize button")
     public void iClickOverOptimizeButton(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@title='Dispatch']")));
+        homePage.clickDispatchMenu();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@title='Optimize']")));
-        dispatchPage = homePage.clickOptimizeButton();
+        homePage.clickOptimizeButton();
     }
 
     @Then("I should be taken to the Optimize page")
     public void iShouldBetakenToTheOptimizePage(){
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("search")));
-        Assert.assertEquals(homePage.getUrl(), "https://rosws.generalsoftwareinc.net:8004/dispatch/optimize", "Not Optimize page found");
-    }
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("root")));
+        Assert.assertEquals(optimizePage.getUrl(), "https://rosws.generalsoftwareinc.net:8004/dispatch/optimize", "Not Optimize page found");
+  }
 }

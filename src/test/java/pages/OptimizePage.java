@@ -2,14 +2,14 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class DispatchPage {
-    private final WebDriver driver;
+public class OptimizePage {
+    private WebDriver driver;
 
-    public DispatchPage(WebDriver driver) {
+    public OptimizePage(WebDriver driver){
         this.driver = driver;
     }
 
-    public String getUrl() {
+    public  String getUrl (){
         return driver.getCurrentUrl();
     }
 }
